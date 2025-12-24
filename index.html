@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ========== CLIENT BUSINESS NAME CHANGE REQUIRED ========== -->
+    <!-- CHANGE THIS TITLE TO CLIENT'S BOUTIQUE NAME -->
+    <title>Ghana Chic Boutique | Premium African Fashion Online</title>
+    
+    <!-- ========== CLIENT SEO META TAGS TO UPDATE ========== -->
+    <!-- UPDATE THESE FOR CLIENT'S BUSINESS SEO -->
+    <meta name="description" content="Discover authentic Ghanaian fashion and boutique items. Handcrafted clothing, accessories, and home decor with African elegance.">
+    <meta name="keywords" content="Ghana fashion, African boutique, online shopping Ghana, African clothing, boutique accessories">
+    <meta name="author" content="Client Business Name">
+    
+    <!-- Facebook/Open Graph Tags - UPDATE FOR CLIENT -->
+    <meta property="og:title" content="Ghana Chic Boutique | Premium African Fashion">
+    <meta property="og:description" content="Discover authentic Ghanaian fashion online">
+    <!-- CLIENT: Replace with actual product image URL -->
+    <meta property="og:image" content="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://www.clientboutique.com">
+    
+    <!-- Twitter Card Tags - UPDATE FOR CLIENT -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ghana Chic Boutique">
+    <meta name="twitter:description" content="Premium African fashion online">
+    
+    <!-- Google Analytics - CLIENT: ADD YOUR TRACKING ID -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
+    
+    <!-- Facebook Pixel - CLIENT: ADD YOUR PIXEL ID -->
+    <!-- <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f.fbq)f.fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', 'YOUR_PIXEL_ID');fbq('track', 'PageView');</script> -->
+    
+    <style>
+        /* ========== CLIENT BRANDING CUSTOMIZATION AREA ========== */
+        /* EASILY CHANGE THESE VARIABLES FOR DIFFERENT CLIENTS */
+        :root {
+            /* PRIMARY BRAND COLORS - CHANGE THESE FOR CLIENT */
+            --primary-color: #CE1126;      /* Ghana Red - Main brand color */
+            --secondary-color: #FCD116;    /* Ghana Gold - Accent color */
+            --accent-color: #006B3F;       /* Ghana Green - Call to action */
+            --dark-color: #333333;         /* Text color */
+            --light-color: #666666;        /* Secondary text */
+            --background-color: #ffffff;   /* Main background */
+            --light-bg: #f8f9fa;           /* Light sections */
+            --border-color: #e0e0e0;       /* Borders */
+            --success-color: #28a745;      /* Success messages */
+            --danger-color: #dc3545;       /* Error/Warning */
+            --shadow: 0 5px 15px rgba(0,0,0,0.08);
+            --radius: 8px;
+            --transition: all 0.3s ease;
+            
+            /* TYPOGRAPHY - CLIENT CAN CHANGE FONT FAMILY */
+            --font-heading: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            --font-body: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--dark-color);
+            background-color: var(--background-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ========== TOP BAR - BUSINESS INFO ========== */
+        /* CLIENT: Update contact info, WhatsApp number, promo text */
+        .top-bar {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .contact-info span {
+            margin-right: 20px;
+        }
+        
+        .contact-info i {
+            margin-right: 5px;
+        }
+        
+        .promo-text {
+            font-weight: bold;
+        }
+        
+        /* ========== HEADER & NAVIGATION ========== */
+        header {
+            background-color: var(--background-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        /* CLIENT LOGO AREA - REPLACE TEXT WITH LOGO IMAGE */
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--accent-color);
+        }
+        
+        .logo img {
+            /* CLIENT: Add max-height for logo image */
+            max-height: 50px;
+        }
+        
+        /* MAIN NAVIGATION - UPDATE MENU ITEMS FOR CLIENT */
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        .main-nav a:hover {
+            color: var(--primary-color);
+        }
+        
+        .main-nav a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .main-nav a:hover:after {
+            width: 100%;
+        }
+        
+        /* HEADER ACTIONS - Cart, User, Search */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .action-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--dark-color);
+            position: relative;
+            padding: 5px;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* ========== HERO SECTION ========== */
+        /* CLIENT: Update hero image, headline, and description */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        /* CLIENT: REPLACE HERO IMAGE URL */
+                        url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-family: var(--font-heading);
+        }
+        
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        /* ========== FEATURED CATEGORIES ========== */
+        /* CLIENT: Update categories based on their products */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--dark-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+        
+        .category-card {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .category-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .category-info {
+            padding: 20px;
+            background-color: var(--background-color);
+        }
+        
+        /* ========== PRODUCTS SECTION ========== */
+        /* CLIENT: Add their actual products here */
+        .products-section {
+            background-color: var(--light-bg);
+            padding: 60px 0;
+            margin-bottom: 60px;
+        }
+        
+        .products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        /* PRODUCT FILTERS - CLIENT: Add more filters as needed */
+        .product-filters {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .product-image {
+            height: 250px;
+            background-color: #f5f5f5;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .product-price {
+            color: var(--primary-color);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .old-price {
+            color: var(--light-color);
+            text-decoration: line-through;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        
+        /* ========== WHATSAPP FLOATING BUTTON ========== */
+        /* CLIENT: Update WhatsApp number and message */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            z-index: 100;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* ========== FOOTER ========== */
+        /* CLIENT: Update all footer information */
+        footer {
+            background-color: #222;
+            color: #ddd;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--secondary-color);
+            padding-left: 5px;
+        }
+        
+        /* POLICY PAGES LINKS - CLIENT: Update actual policy pages */
+        .policy-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .policy-links a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .policy-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        /* PAYMENT METHODS - CLIENT: Update accepted payment methods */
+        .payment-methods {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .payment-icon {
+            background: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 24px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #888;
+            font-size: 14px;
+        }
+        
+        /* ========== RESPONSIVE DESIGN ========== */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .main-nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .products-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            
+            .top-bar-content {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .contact-info {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+        
+        /* ========== MODAL/POPUP STYLES ========== */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            border-radius: var(--radius);
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-body {
+            padding: 20px;
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--light-color);
+        }
+        
+        /* ========== CART STYLES ========== */
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .cart-item-info {
+            flex-grow: 1;
+        }
+        
+        .cart-item-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .cart-item-price {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .cart-item-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .quantity-btn {
+            width: 30px;
+            height: 30px;
+            border: 1px solid var(--border-color);
+            background: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            padding: 5px;
+            border-radius: 4px;
+        }
+        
+        .remove-item {
+            color: var(--danger-color);
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .cart-total {
+            padding: 20px;
+            border-top: 2px solid var(--border-color);
+            text-align: right;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 20px;
+        }
+        
+        .checkout-btn:hover {
+            background-color: var(--primary-color);
+        }
+    </style>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- ========== TOP BAR WITH BUSINESS INFO ========== -->
+    <!-- CLIENT: Update contact details and WhatsApp number -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +233 12 345 6789</span>
+                <span><i class="fas fa-envelope"></i> info@clientboutique.com</span>
+                <span><i class="fas fa-map-marker-alt"></i> Kumasi, Ghana</span>
+            </div>
+            <div class="promo-text">
+                <!-- CLIENT: Update promotional text -->
+                🚚 Free Delivery in Kumasi and Accra for Orders Over ₵300
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== MAIN HEADER ========== -->
+    <header>
+        <div class="container header-content">
+            <!-- CLIENT LOGO - Replace with actual logo -->
+            <a href="#" class="logo">
+                <!-- <img src="client-logo.png" alt="Client Boutique Name"> -->
+                <i class="fas fa-crown"></i> Ghana<span>Chic</span>
+            </a>
+            
+            <!-- MAIN NAVIGATION -->
+            <nav class="main-nav">
+                <ul>
+                    <!-- CLIENT: Update navigation items -->
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#products">Shop</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- HEADER ACTIONS -->
+            <div class="header-actions">
+                <button class="action-btn" id="searchBtn" title="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="action-btn" id="userBtn" title="Account">
+                    <i class="fas fa-user"></i>
+                </button>
+                <button class="action-btn" id="cartBtn" title="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <!-- CLIENT: Update hero image, headline, and description -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <!-- HERO HEADLINE - Update for client's business -->
+                <h1>Discover Authentic Ghanaian Elegance</h1>
+                <!-- HERO DESCRIPTION - Update for client -->
+                <p>Handcrafted boutique fashion, accessories, and home decor. Experience premium quality with traditional African craftsmanship.</p>
+                <!-- CALL TO ACTION BUTTON -->
+                <a href="#products" class="checkout-btn" style="display: inline-block; width: auto; padding: 12px 40px;">
+                    Shop Collection <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FEATURED CATEGORIES ========== -->
+    <!-- CLIENT: Update categories based on their products -->
+    <section class="container">
+        <h2 class="section-title">Shop By Category</h2>
+        <div class="categories-grid" id="categories">
+            <!-- CATEGORY 1 -->
+            <div class="category-card">
+                <!-- CLIENT: Update category image -->
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"></div>
+                <div class="category-info">
+                    <!-- CLIENT: Update category name -->
+                    <h3>Women's Fashion</h3>
+                    <p>Traditional and modern clothing</p>
+                    <a href="#" style="color: var(--primary-color); text-decoration: none; font-weight: 600; margin-top: 10px; display: inline-block;">
+                        Shop Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- CATEGORY 2 -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"></div>
+                <div class="category-info">
+                    <h3>Accessories</h3>
+                    <p>Jewelry, bags, and more</p>
+                    <a href="#" style="color: var(--primary-color); text-decoration: none; font-weight: 600; margin-top: 10px; display: inline-block;">
+                        Shop Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- CATEGORY 3 -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1520975916090-3105956dac38?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"></div>
+                <div class="category-info">
+                    <h3>Home & Living</h3>
+                    <p>African decor for your home</p>
+                    <a href="#" style="color: var(--primary-color); text-decoration: none; font-weight: 600; margin-top: 10px; display: inline-block;">
+                        Shop Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- CATEGORY 4 -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80')"></div>
+                <div class="category-info">
+                    <h3>Men's Collection</h3>
+                    <p>Traditional and casual wear</p>
+                    <a href="#" style="color: var(--primary-color); text-decoration: none; font-weight: 600; margin-top: 10px; display: inline-block;">
+                        Shop Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FEATURED PRODUCTS ========== -->
+    <!-- CLIENT: Add their actual products here -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="products-header">
+                <h2 class="section-title" style="margin-bottom: 0;">Featured Products</h2>
+                
+                <!-- PRODUCT FILTERS -->
+                <!-- CLIENT: Add more filters as needed -->
+                <div class="product-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="clothing">Clothing</button>
+                    <button class="filter-btn" data-filter="accessories">Accessories</button>
+                    <button class="filter-btn" data-filter="home">Home Decor</button>
+                    <button class="filter-btn" data-filter="sale">On Sale</button>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                <!-- PRODUCT 1 -->
+                <!-- CLIENT: Duplicate and modify for each product -->
+                <div class="product-card" data-category="clothing">
+                    <div class="product-image">
+                        <span class="product-badge">New</span>
+                        <!-- CLIENT: Update product image -->
+                        <div style="width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); background-size: cover; background-position: center;"></div>
+                    </div>
+                    <div class="product-info">
+                        <!-- CLIENT: Update product title -->
+                        <h3 class="product-title">Kente Print Maxi Dress</h3>
+                        <p class="product-description" style="color: var(--light-color); font-size: 14px; margin-bottom: 10px;">
+                            Elegant traditional dress with authentic Kente patterns
+                        </p>
+                        <!-- CLIENT: Update product price -->
+                        <div class="product-price">₵250.00 <span class="old-price">₵300.00</span></div>
+                        <!-- PRODUCT VARIANTS - CLIENT: Update sizes/colors -->
+                        <div style="margin-bottom: 15px;">
+                            <small style="color: var(--light-color);">Sizes: S, M, L, XL</small><br>
+                            <small style="color: var(--light-color);">Colors: Red/Gold, Green/Gold</small>
+                        </div>
+                        <button class="add-to-cart" data-product="Kente Print Maxi Dress" data-price="250" data-id="1">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- PRODUCT 2 -->
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <span class="product-badge" style="background-color: var(--accent-color);">Bestseller</span>
+                        <div style="width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); background-size: cover; background-position: center;"></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">African Print Handbag</h3>
+                        <p class="product-description" style="color: var(--light-color); font-size: 14px; margin-bottom: 10px;">
+                            Handmade with vibrant Ankara fabric
+                        </p>
+                        <div class="product-price">₵180.00</div>
+                        <div style="margin-bottom: 15px;">
+                            <small style="color: var(--light-color);">Colors: Multicolor, Blue/Orange, Green/Yellow</small>
+                        </div>
+                        <button class="add-to-cart" data-product="African Print Handbag" data-price="180" data-id="2">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- PRODUCT 3 -->
+                <div class="product-card" data-category="accessories sale">
+                    <div class="product-image">
+                        <span class="product-badge" style="background-color: var(--danger-color);">Sale</span>
+                        <div style="width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); background-size: cover; background-position: center;"></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Wooden Bead Necklace Set</h3>
+                        <p class="product-description" style="color: var(--light-color); font-size: 14px; margin-bottom: 10px;">
+                            Traditional Ghanaian jewelry set
+                        </p>
+                        <div class="product-price">₵120.00 <span class="old-price">₵150.00</span></div>
+                        <div style="margin-bottom: 15px;">
+                            <small style="color: var(--light-color);">Set includes: Necklace, Earrings, Bracelet</small>
+                        </div>
+                        <button class="add-to-cart" data-product="Wooden Bead Necklace Set" data-price="120" data-id="3">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- PRODUCT 4 -->
+                <div class="product-card" data-category="home">
+                    <div class="product-image">
+                        <div style="width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'); background-size: cover; background-position: center;"></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Kente Throw Pillow</h3>
+                        <p class="product-description" style="color: var(--light-color); font-size: 14px; margin-bottom: 10px;">
+                            Handwoven Kente fabric pillow cover
+                        </p>
+                        <div class="product-price">₵85.00</div>
+                        <div style="margin-bottom: 15px;">
+                            <small style="color: var(--light-color);">Size: 18x18 inches</small><br>
+                            <small style="color: var(--light-color);">Patterns: Various traditional designs</small>
+                        </div>
+                        <button class="add-to-cart" data-product="Kente Throw Pillow" data-price="85" data-id="4">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <!-- CLIENT: Update with their business story -->
+    <section id="about" style="padding: 60px 0; background-color: var(--light-bg);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; align-items: center;">
+                <div>
+                    <h2 class="section-title" style="text-align: left;">Our Story</h2>
+                    <!-- CLIENT: Update their business story -->
+                    <p style="margin-bottom: 20px;">
+                        Founded in Accra, Ghana Chic Boutique celebrates African craftsmanship and tradition. We work directly with local artisans to bring you authentic, high-quality products that tell a story.
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                        Every piece in our collection is carefully selected to ensure it represents the rich cultural heritage of Ghana while meeting contemporary fashion standards.
+                    </p>
+                    <!-- CLIENT: Update their unique selling points -->
+                    <ul style="list-style: none; margin-bottom: 30px;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> 100% Authentic Ghanaian Products</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> Supporting Local Artisans</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> Premium Quality Materials</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--accent-color); margin-right: 10px;"></i> Secure Online Shopping</li>
+                    </ul>
+                </div>
+                <div>
+                    <!-- CLIENT: Update about image -->
+                    <div style="height: 400px; background-image: url('https://images.unsplash.com/photo-1520004434532-668416a08753?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center; border-radius: var(--radius);"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <!-- CLIENT: Update all footer information -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- ABOUT SECTION -->
+                <div class="footer-section">
+                    <h3>Ghana Chic Boutique</h3>
+                    <!-- CLIENT: Update business description -->
+                    <p style="margin-bottom: 20px; color: #aaa;">
+                        Premium Ghanaian fashion and boutique items. Supporting local artisans with authentic African designs.
+                    </p>
+                    <!-- SOCIAL MEDIA LINKS - CLIENT: Update with their links -->
+                    <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                        <a href="#" style="color: #aaa; font-size: 20px;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: #aaa; font-size: 20px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: #aaa; font-size: 20px;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: #aaa; font-size: 20px;"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <!-- QUICK LINKS -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <!-- CLIENT: Update links -->
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#products">Shop</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                
+                <!-- CUSTOMER SERVICE -->
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <!-- CLIENT: Update these pages when created -->
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <!-- CONTACT INFO -->
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <!-- CLIENT: Update contact information -->
+                    <p style="margin-bottom: 10px; color: #aaa;">
+                        <i class="fas fa-map-marker-alt" style="margin-right: 10px; color: var(--secondary-color);"></i>
+                        Accra, Ghana
+                    </p>
+                    <p style="margin-bottom: 10px; color: #aaa;">
+                        <i class="fas fa-phone" style="margin-right: 10px; color: var(--secondary-color);"></i>
+                        +233 24 123 4567
+                    </p>
+                    <p style="margin-bottom: 20px; color: #aaa;">
+                        <i class="fas fa-envelope" style="margin-right: 10px; color: var(--secondary-color);"></i>
+                        info@clientboutique.com
+                    </p>
+                    
+                    <!-- PAYMENT METHODS - CLIENT: Update accepted methods -->
+                    <h4 style="color: white; font-size: 16px; margin-bottom: 10px;">We Accept</h4>
+                    <div class="payment-methods">
+                        <div class="payment-icon">₵</div>
+                        <div class="payment-icon"><i class="fab fa-cc-mastercard"></i></div>
+                        <div class="payment-icon"><i class="fab fa-cc-visa"></i></div>
+                        <div class="payment-icon">MoMo</div>
+                        <div class="payment-icon">Vodafone Cash</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- POLICY LINKS -->
+            <div class="policy-links">
+                <!-- CLIENT: Create actual policy pages and update links -->
+                <a href="#">Terms of Service</a> | 
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Shipping Policy</a> | 
+                <a href="#">Return Policy</a> | 
+                <a href="#">Cookie Policy</a>
+            </div>
+            
+            <!-- COPYRIGHT -->
+            <div class="copyright">
+                <!-- CLIENT: Update copyright year and business name -->
+                <p>&copy; 2023 Ghana Chic Boutique. All rights reserved. | Designed for Ghanaian Boutique Businesses</p>
+                <p style="margin-top: 10px; font-size: 12px;">Prices are in Ghanaian Cedi (₵)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== WHATSAPP FLOATING BUTTON ========== -->
+    <!-- CLIENT: Update WhatsApp number and pre-filled message -->
+    <a href="https://wa.me/233241234567?text=Hi!%20I'm%20interested%20in%20products%20from%20your%20boutique" 
+       class="whatsapp-float" 
+       target="_blank"
+       title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ========== SHOPPING CART MODAL ========== -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Your Shopping Cart</h2>
+                <button class="close-modal" id="closeCart">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="cartItemsContainer">
+                    <!-- Cart items will be dynamically added here -->
+                    <p id="emptyCartMessage" style="text-align: center; color: var(--light-color); padding: 40px 0;">
+                        Your cart is empty
+                    </p>
+                </div>
+                <div id="cartSummary" style="display: none;">
+                    <div class="cart-total">
+                        Total: <span id="cartTotalAmount">₵0.00</span>
+                    </div>
+                    <!-- CLIENT: Update checkout link/process -->
+                    <button class="checkout-btn" id="checkoutBtn">
+                        Proceed to Checkout <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <p style="text-align: center; margin-top: 15px; font-size: 14px; color: var(--light-color);">
+                        Free delivery in Accra for orders over ₵300
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== LOGIN/REGISTER MODAL ========== -->
+    <!-- CLIENT: Connect to backend authentication -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Account</h2>
+                <button class="close-modal" id="closeAuth">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="loginForm">
+                    <h3 style="margin-bottom: 20px;">Login</h3>
+                    <input type="email" id="loginEmail" placeholder="Email Address" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid var(--border-color); border-radius: 4px;">
+                    <input type="password" id="loginPassword" placeholder="Password" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid var(--border-color); border-radius: 4px;">
+                    <button class="checkout-btn" style="margin-bottom: 15px;">Login</button>
+                    <p style="text-align: center; margin-bottom: 15px;">
+                        <a href="#" style="color: var(--primary-color);">Forgot Password?</a>
+                    </p>
+                    <p style="text-align: center;">
+                        Don't have an account? <a href="#" id="showRegister" style="color: var(--primary-color); font-weight: 600;">Register here</a>
+                    </p>
+                </div>
+                
+                <div id="registerForm" style="display: none;">
+                    <h3 style="margin-bottom: 20px;">Create Account</h3>
+                    <input type="text" id="registerName" placeholder="Full Name" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid var(--border-color); border-radius: 4px;">
+                    <input type="email" id="registerEmail" placeholder="Email Address" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid var(--border-color); border-radius: 4px;">
+                    <input type="tel" id="registerPhone" placeholder="Phone Number" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid var(--border-color); border-radius: 4px;">
+                    <input type="password" id="registerPassword" placeholder="Password" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid var(--border-color); border-radius: 4px;">
+                    <button class="checkout-btn" style="margin-bottom: 15px;">Create Account</button>
+                    <p style="text-align: center;">
+                        Already have an account? <a href="#" id="showLogin" style="color: var(--primary-color); font-weight: 600;">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ========== E-COMMERCE FUNCTIONALITY ==========
+        // CLIENT NOTE: This is frontend functionality. Backend needed for full e-commerce
+        
+        // Shopping Cart System
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        // DOM Elements
+        const cartBtn = document.getElementById('cartBtn');
+        const cartModal = document.getElementById('cartModal');
+        const closeCart = document.getElementById('closeCart');
+        const cartCount = document.querySelector('.cart-count');
+        const cartItemsContainer = document.getElementById('cartItemsContainer');
+        const cartSummary = document.getElementById('cartSummary');
+        const cartTotalAmount = document.getElementById('cartTotalAmount');
+        const emptyCartMessage = document.getElementById('emptyCartMessage');
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const checkoutBtn = document.getElementById('checkoutBtn');
+        
+        // User Authentication Modal
+        const userBtn = document.getElementById('userBtn');
+        const authModal = document.getElementById('authModal');
+        const closeAuth = document.getElementById('closeAuth');
+        const showRegister = document.getElementById('showRegister');
+        const showLogin = document.getElementById('showLogin');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        
+        // Product Filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+        
+        // ========== CART FUNCTIONALITY ==========
+        
+        // Open cart modal
+        cartBtn.addEventListener('click', () => {
+            cartModal.style.display = 'flex';
+            updateCartDisplay();
+        });
+        
+        // Close cart modal
+        closeCart.addEventListener('click', () => {
+            cartModal.style.display = 'none';
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === cartModal) {
+                cartModal.style.display = 'none';
+            }
+            if (e.target === authModal) {
+                authModal.style.display = 'none';
+            }
+        });
+        
+        // Add to cart functionality
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                const product = {
+                    id: button.getAttribute('data-id'),
+                    name: button.getAttribute('data-product'),
+                    price: parseFloat(button.getAttribute('data-price')),
+                    quantity: 1
+                };
+                
+                addToCart(product);
+                updateCartUI();
+                
+                // Show feedback
+                showNotification(`${product.name} added to cart!`);
+            });
+        });
+        
+        // Add item to cart
+        function addToCart(product) {
+            const existingItem = cart.find(item => item.id === product.id);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push(product);
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+        
+        // Update cart UI
+        function updateCartUI() {
+            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+            cartCount.textContent = totalItems;
+        }
+        
+        // Update cart display in modal
+        function updateCartDisplay() {
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p id="emptyCartMessage" style="text-align: center; color: var(--light-color); padding: 40px 0;">Your cart is empty</p>';
+                cartSummary.style.display = 'none';
+                return;
+            }
+            
+            let itemsHTML = '';
+            let total = 0;
+            
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                itemsHTML += `
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <div class="cart-item-title">${item.name}</div>
+                            <div class="cart-item-price">₵${item.price.toFixed(2)}</div>
+                        </div>
+                        <div class="cart-item-actions">
+                            <button class="quantity-btn" onclick="updateQuantity(${index}, -1)">-</button>
+                            <input type="text" class="quantity-input" value="${item.quantity}" readonly>
+                            <button class="quantity-btn" onclick="updateQuantity(${index}, 1)">+</button>
+                            <button class="remove-item" onclick="removeFromCart(${index})">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            cartItemsContainer.innerHTML = itemsHTML;
+            cartTotalAmount.textContent = `₵${total.toFixed(2)}`;
+            cartSummary.style.display = 'block';
+        }
+        
+        // Update item quantity
+        function updateQuantity(index, change) {
+            cart[index].quantity += change;
+            
+            if (cart[index].quantity < 1) {
+                cart.splice(index, 1);
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartUI();
+            updateCartDisplay();
+        }
+        
+        // Remove item from cart
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartUI();
+            updateCartDisplay();
+        }
+        
+        // ========== USER AUTHENTICATION ==========
+        // CLIENT NOTE: Connect to backend (PHP/MySQL) for real authentication
+        
+        userBtn.addEventListener('click', () => {
+            authModal.style.display = 'flex';
+        });
+        
+        closeAuth.addEventListener('click', () => {
+            authModal.style.display = 'none';
+        });
+        
+        showRegister.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginForm.style.display = 'none';
+            registerForm.style.display = 'block';
+        });
+        
+        showLogin.addEventListener('click', (e) => {
+            e.preventDefault();
+            registerForm.style.display = 'none';
+            loginForm.style.display = 'block';
+        });
+        
+        // ========== PRODUCT FILTERING ==========
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                const filter = button.getAttribute('data-filter');
+                
+                // Filter products
+                productCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // ========== CHECKOUT PROCESS ==========
+        // CLIENT NOTE: Connect to payment gateway (Paystack, Flutterwave, etc.)
+        
+        checkoutBtn.addEventListener('click', () => {
+            if (cart.length === 0) {
+                showNotification('Your cart is empty!', 'error');
+                return;
+            }
+            
+            // CLIENT: Implement actual checkout process
+            // This is where you would integrate with payment gateway
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            // For demo purposes - show checkout modal
+            alert(`Proceeding to checkout. Total: ₵${total.toFixed(2)}\n\nCLIENT NOTE: Connect to payment gateway (Paystack, Flutterwave, MTN MoMo, etc.)`);
+            
+            // In real implementation:
+            // 1. Collect shipping information
+            // 2. Integrate with payment gateway
+            // 3. Process order
+            // 4. Send confirmation email
+        });
+        
+        // ========== HELPER FUNCTIONS ==========
+        
+        function showNotification(message, type = 'success') {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 15px 25px;
+                background-color: ${type === 'success' ? 'var(--success-color)' : 'var(--danger-color)'};
+                color: white;
+                border-radius: var(--radius);
+                z-index: 3000;
+                box-shadow: var(--shadow);
+                animation: slideIn 0.3s ease;
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+        
+        // Add CSS animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Initialize cart UI
+        updateCartUI();
+        
+        // ========== SEARCH FUNCTIONALITY (TO BE IMPLEMENTED) ==========
+        // CLIENT: Add search functionality
+        const searchBtn = document.getElementById('searchBtn');
+        searchBtn.addEventListener('click', () => {
+            // CLIENT: Implement search modal or redirect to search page
+            alert('Search functionality to be implemented');
+        });
+        
+        // ========== INVENTORY MANAGEMENT NOTES ==========
+        // CLIENT: For inventory management, you'll need:
+        // 1. Database with stock quantities
+        // 2. Backend to update stock when orders are placed
+        // 3. Low stock alerts for admin
+        // 4. Out of stock handling on frontend
+        
+    </script>
+</body>
+</html>
